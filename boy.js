@@ -2,8 +2,10 @@ window.addEventListener('load', () => {
     console.log("hello")
     let photo = document.querySelector('.photo');
     let fundo = document.querySelector('.fundo');
-    var back = document.querySelector('.back');
-    var back1 = document.querySelector('.back1');
+    let back = document.querySelector('.back');
+    let back1 = document.querySelector('.back1');
+    let linkedin = document.querySelector('#linkedin')
+    let link_linkedin = document.querySelector('#link_linkedin')
 
     setTimeout(() => {
         let loader = document.querySelector('.loader');
@@ -31,6 +33,16 @@ window.addEventListener('load', () => {
     window.scrollTo(0, `${-500}px`);
   
     })
+
+    link_linkedin.addEventListener('mouseover', () => {
+        linkedin = linkedin.src='fotos webt/linkedinYellow.png'
+    })
+
+    link_linkedin.addEventListener('mouseout', () => {
+        linkedin = linkedin.src='fotos webt/linkedin.png'
+    })
+
+    
 });
 
 

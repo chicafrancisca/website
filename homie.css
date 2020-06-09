@@ -65,6 +65,7 @@
     margin-top: 5rem;
     margin-left: -3.5rem;
     -webkit-text-stroke-color: #0000FF;
+    overflow: visible
 }
 
 .abt{
@@ -90,6 +91,7 @@
     justify-self: right;
     margin-right: -3.5rem;
     -webkit-text-stroke-color:#0000FF;
+    overflow: visible;
 }
 
 #abt_section{
@@ -139,6 +141,7 @@
     -webkit-text-stroke-color: #F83E03;
     margin-left: 4rem;
     padding-top: 1rem;
+    cursor: pointer;
 }
 
 .back{
@@ -148,6 +151,7 @@
     -webkit-text-stroke-color: #F83E03;
     margin-left: 4rem;
     padding-top: 1rem;
+    cursor: pointer;
 }
 
 .contacts p{
@@ -187,14 +191,13 @@ a:hover {
     font-weight: normal;
 }
 
-contactos_link a{
-height: 50%;
-width: 50%;
+contactos_link :hover{
+    cursor: pointer;
 }
 
 .socials{
-    width: 1.5%;
-    height: 1.5%;
+    width: 20;
+    height: 20px;
     margin-left: 1rem;
     transform: rotate(-90deg);
 }

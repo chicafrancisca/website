@@ -1,200 +1,220 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'BentonSans', sans-serif;
-    font-weight: 1000;
-    overflow: hidden;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'BentonSans', sans-serif;
+  font-weight: 1000;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  cursor: none;
 }
 
-.fundo{
-    /* background-color: blue; */
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background-image: url("fotos webt/back.gif");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
+body a {
+  z-index: 5;
+}
+
+/* cursor */
+
+.cursor {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  border-radius: 50%;
+  background-color: #fff;
+  mix-blend-mode: difference;
+  z-index: 3;
+}
+
+.fundo {
+  /* background-color: blue; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url('fotos webt/back.gif');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.loader {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader p {
+  color: white;
+  /* transform: scale(0.5); */
+  animation: blinking 0.7s linear infinite;
+  font-size: 2rem;
+  background-color: rgb(36, 0, 240);
+}
+
+@keyframes blinking {
+  from {
+    opacity: 1;
+  }
+  to {
     opacity: 0;
-    
+  }
 }
 
-.loader{
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 1.8rem;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  width: 100vw;
+  height: 100vh;
 }
 
-.loader p{
-    color: white;
-    /* transform: scale(0.5); */
-    animation: blinking 0.7s linear infinite;
-    font-size: 2rem;
-    background-color: rgb(36, 0, 240);
+.ilus {
+  width: 228.25px;
+  height: 30px;
+  transform: rotate(-90deg);
+  justify-self: left;
+  margin-top: 5rem;
+  margin-left: -3.5rem;
+  -webkit-text-stroke-color: #0000ff;
 }
 
-@keyframes blinking{
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
+.abt {
+  height: 100px;
+  margin-top: 36.5rem;
+  margin-left: -10rem;
+  -webkit-text-stroke-color: #0000ff;
 }
 
-.Nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    font-size: 1.8rem;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
-    width: 100vw;
-    height: 100vh;
-
+.photo {
+  height: 100px;
+  margin-top: 2.1rem;
+  margin-left: 25rem;
+  -webkit-text-stroke-color: #0000ff;
+  overflow: visible;
 }
 
-.ilus{
-    width: 228.25px;
-    height: 30px;
-    transform: rotate(-90deg);
-    justify-self: left;
-    margin-top: 5rem;
-    margin-left: -3.5rem;
-    -webkit-text-stroke-color: #0000FF;
+.ani {
+  transform: rotate(90deg);
+  width: 228.25px;
+  height: 30px;
+  margin-top: 35rem;
+  justify-self: right;
+  margin-right: -3.5rem;
+  -webkit-text-stroke-color: #0000ff;
 }
 
-.abt{
-    height: 100px;
-    margin-top: 36.5rem;
-    margin-left: -10rem;
-    -webkit-text-stroke-color: #0000FF;
+#abt_section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000ff;
+  background-image: url('fotos webt/fundo2.png');
+  background-size: cover;
+  overflow: hidden;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.photo{
-    height: 100px;
-    margin-top: 2.1rem;
-    margin-left: 25rem;
-    -webkit-text-stroke-color: #0000FF;
-    overflow: visible;
+#photo_section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000ff;
+  overflow: hidden;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.ani{
-    transform: rotate(90deg);
-    width: 228.25px;
-    height: 30px;
-    margin-top: 35rem;
-    justify-self: right;
-    margin-right: -3.5rem;
-    -webkit-text-stroke-color:#0000FF;
+.about_me p {
+  color: #f83e03;
+  font-size: 6rem;
+  margin-top: -22rem;
+  padding-left: 5rem;
+  z-index: 1000;
+  line-height: 5rem;
 }
-
-#abt_section{
-    width: 100vw;
-    height: 100vh;
-    background-color: #0000FF;
-    background-image: url("fotos webt/fundo2.png");
-    background-size: cover;
-    overflow: hidden;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#photo_section{
-    width: 100vw;
-    height: 100vh;
-    background-color: #0000FF;
-    overflow: hidden;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.about_me p{
-    color: #F83E03;
-    font-size: 6rem;
-    margin-top: -22rem;
-    padding-left: 5rem;
-    z-index: 1000;
-    line-height: 5rem;
-}
-
 
 .perfil {
-    width: 74%;
-    height: 60%;
-    margin-left: 10rem;
-    margin-top: 12rem;
-    z-index: -1;
+  width: 74%;
+  height: 60%;
+  margin-left: 10rem;
+  margin-top: 12rem;
+  z-index: -1;
 }
 
-.back1{
-    font-size: 1.8rem;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F83E03;
-    margin-left: 4rem;
-    padding-top: 1rem;
+.back1 {
+  position: absolute;
+  font-size: 1.8rem;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f83e03;
+  margin-left: 4rem;
+  padding-top: 1rem;
 }
 
-.back{
-    font-size: 1.8rem;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F83E03;
-    margin-left: 4rem;
-    padding-top: 1rem;
+.back {
+  position: absolute;
+  font-size: 1.8rem;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f83e03;
+  margin-left: 4rem;
+  padding-top: 1rem;
 }
 
-.contacts p{
-    font-family: 'BentonSans', sans-serif;
-    font-weight: 50;
-    padding-bottom: 0.5rem;
-    color: #EC94DF;
+.contacts p {
+  font-family: 'BentonSans', sans-serif;
+  font-weight: 50;
+  padding-bottom: 0.5rem;
+  color: #ec94df;
 }
 
-
-
-.texto{
-    width: 50%;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-top: 4rem;
-    margin-left: 17rem;
+.texto {
+  width: 50%;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 4rem;
+  margin-left: 17rem;
 }
 
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
-    -webkit-text-fill-color:#FAB404;
+  text-decoration: none;
+  -webkit-text-fill-color: #fab404;
 }
 
-.contacto{
-    display: flex;
-    transform: rotate(90deg);
-    margin-top: 41.5rem;
-    margin-right: -33rem;
+.contacto {
+  display: flex;
+  transform: rotate(90deg);
+  margin-top: 41.5rem;
+  margin-right: -33rem;
 }
 
-.contacto p{
-    font-weight: normal;
+.contacto p {
+  font-weight: normal;
 }
 
-contactos_link a{
-height: 50%;
-width: 50%;
+contactos_link a {
+  height: 50%;
+  width: 50%;
 }
 
-.socials{
-    width: 1.5%;
-    height: 1.5%;
-    margin-left: 1rem;
-    transform: rotate(-90deg);
+.socials {
+  width: 1.5%;
+  height: 1.5%;
+  margin-left: 1rem;
+  transform: rotate(-90deg);
 }

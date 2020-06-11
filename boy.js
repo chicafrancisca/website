@@ -44,13 +44,7 @@ window.addEventListener('load', () => {
         linkedin = linkedin.src='fotos webt/linkedin.png'
     })
 
-    
-});
-
-
-
-
-  //função do cursor
+      //função do cursor
 
   const handleMouse = (e) => {
     console.log(e.pageX);
@@ -59,4 +53,12 @@ window.addEventListener('load', () => {
   };
 
   window.addEventListener('mousemove', handleMouse);
+
+
+    
+});
+
+
+
+
 

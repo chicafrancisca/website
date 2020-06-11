@@ -6,7 +6,7 @@
   font-weight: 1000;
   overflow: hidden;
   scroll-behavior: smooth;
-  cursor: none;
+  /* cursor: none; */
 }
 
 body a {
@@ -15,7 +15,7 @@ body a {
 
 /* cursor */
 
-.cursor {
+/* .cursor {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -25,7 +25,7 @@ body a {
   background-color: #fff;
   mix-blend-mode: difference;
   z-index: 3;
-}
+} */
 
 .fundo {
   /* background-color: blue; */
@@ -128,7 +128,7 @@ body a {
 #photo_section {
   width: 100vw;
   height: 100vh;
-  background-color: #0000ff;
+  background-color: black;
   overflow: hidden;
   background-size: cover;
   display: grid;
@@ -217,15 +217,7 @@ body a {
     grid-template-columns: 1fr 1fr;
 }
 
-#photo_section{
-    width: 100vw;
-    height: 100vh;
-    background-color: #0000FF;
-    overflow: hidden;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 
 .about_me p{
     color: #F83E03;
@@ -302,9 +294,11 @@ a:hover {
   font-weight: normal;
 }
 
-contactos_link :hover{
+.contactos_link{
     cursor: pointer;
+    z-index: 5;
 }
+
 
 .socials{
     width: 20;
